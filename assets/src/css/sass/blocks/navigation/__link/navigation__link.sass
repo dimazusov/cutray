@@ -1,0 +1,13 @@
+@import "../../../variables"
+
+.navigation__link
+  font-size: 16px
+  display: block
+  padding: 5px 20px
+
+// планшеты и мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .navigation__link
+    font-size: 25px
+    padding: 20px 30px
+    border-bottom: 1px solid #eee

@@ -1,0 +1,16 @@
+@import "../../variables"
+
+.navigation
+  font-family: arial
+  text-align: left
+  font-size: 20px
+  display: block
+
+// планшеты и мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .navigation
+    top: 0px
+    left: 0px
+    display: none
+    width: 100%
+    font-size: 30px

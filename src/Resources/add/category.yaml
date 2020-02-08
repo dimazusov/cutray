@@ -1,0 +1,23 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+category:
+  model: 'App\Entity\Category'
+  columns:
+    name:
+      column: 'name'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    seoname:
+      column: 'seoname'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    parent_id:
+      column: 'parent_id'
+      constraints:
+        Length:
+          min: 1
+          max: 30

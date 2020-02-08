@@ -1,0 +1,39 @@
+@import "../../variables"
+@import "../../mixins"
+
+$height: 20
+
+.item-counter
+  display: inline-block
+  height: $height
+  width: unquote($height*4 + 'px')
+
+.item-counter__less, .item-counter__more
+  height: inherit
+  display: inline-block
+  opacity: 0.4
+  margin: 0 5px
+
+.item-counter__less:hover, .item-counter__more:hover
+  cursor: pointer
+  opacity: 1
+
+.item-counter__less
+  @include setBackground(6, 4, $height)
+
+.item-counter__more
+  @include setBackground(8, 2, $height)
+
+.item-counter__less:hover, .item-counter__more:hover
+  @include setHoverBackground()
+
+.item-counter__value
+  position: relative
+  top: unquote($height*(-0.20) + 'px')
+  font-size: unquote($height + 'px')
+  height: inherit
+  display: inline-block
+  font-family: arial
+  opacity: 0.8
+
+

@@ -1,0 +1,22 @@
+@import "../../../variables"
+
+.wrapper_min
+  box-sizing: border-box
+  display: inline-block
+  text-align: center
+  border: 1px solid #ccc
+  border-radius: 5px
+  padding: 30px 100px 50px 100px
+  margin: 50px auto
+
+
+// планшеты и мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .wrapper_min
+    box-sizing: border-box
+    display: block
+    width: 100%
+    text-align: center
+    border: none
+    margin: 25px 0 50px 0
+    padding: 0

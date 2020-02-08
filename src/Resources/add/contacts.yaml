@@ -1,0 +1,35 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+  - 'ROLE_UNKNOWN'
+contacts:
+  model: 'App\Entity\Contacts'
+  eventListener: '\App\ResourceListeners\ResourceContactListener'
+  columns:
+    subject:
+      column: 'subject'
+      constraints:
+        NotBlank:
+          message: 'errors.empty'
+        Length:
+          min: 2
+          max: 255
+          minMessage: 'errors.too_small'
+          maxMessage: 'errors.too_big'
+    message:
+      column: 'message'
+      constraints:
+        NotBlank:
+          message: 'errors.empty'
+        Length:
+          min: 5
+          max: 3000
+          minMessage: 'errors.too_small'
+          maxMessage: 'errors.too_big'
+    email:
+      column: 'email'
+      constraints:
+        NotBlank:
+          message: 'errors.empty'
+        Email:
+          message: 'errors.not_email'

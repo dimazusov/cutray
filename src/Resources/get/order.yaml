@@ -1,0 +1,35 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+order:
+  model: 'App\Entity\Order'
+  selectColumns:
+    - id
+    - amount
+    - user_id
+    - status
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    user_id:
+      column: 'user_id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    amount:
+      column: 'amount'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+  child:
+    products:
+      is_array: true
+      model: 'App\Entity\OrderProduct'
+      joinColumnName: 'order_id'
+      parentJoinColumnName: 'id'
+      selectColumns:
+        - product_id
+        - count

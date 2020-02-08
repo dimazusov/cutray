@@ -1,0 +1,14 @@
+@import "../../../variables"
+
+.item__name
+  padding: 9px
+  text-align: left
+  font-size: 14px
+  overflow: hidden
+  height: 42px
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .item__name
+    font-size: $itemListMobileFontSize
+    height: 52px

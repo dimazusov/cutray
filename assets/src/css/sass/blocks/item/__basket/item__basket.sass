@@ -1,0 +1,24 @@
+@import "../../../variables"
+@import "../../../mixins"
+
+.item__basket
+  @include setBackground(4, 8, 25)
+
+  //display: inline-block
+  transition: ease-in-out 0.1s
+  opacity: 0.8
+  margin: -5px 2px 0 10px
+  float: left
+  width: 25px
+  height: 25px
+
+.item__basket:hover
+  @include setHoverBackground()
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .item__basket
+    @include setBackground(4, 8, 22)
+
+.item__basket:hover
+  opacity: 1
+  cursor: pointer

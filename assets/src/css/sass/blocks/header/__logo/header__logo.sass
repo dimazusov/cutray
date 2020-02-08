@@ -1,0 +1,31 @@
+@import "../../../variables"
+
+.header__logo
+  display: table-cell
+  text-align: center
+  vertical-align: middle
+  padding: 6px 20px
+  width: 18%
+
+.header__logo-img
+  height: 70px
+
+@media (min-width: $minWidthSize + px)
+  .header__logo
+    display: block
+    float: left
+
+  .header__logo-img
+    width: initial
+
+@media (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__logo
+    padding: 0
+
+@media (max-width: $minWidthTabletSize + px)
+  .header__logo-img
+    height: 46px
+
+@media (min-width: $minWidthSize + px)
+  .header__mobile-menu
+    display: none

@@ -1,0 +1,20 @@
+@import "../../../variables"
+
+.search__button
+  position: relative
+  top: 12px
+  left: -41px
+  width: 40px
+  height: 40px
+  cursor: pointer
+  display: inline-block
+  background-image: url("/img/sprite.png")
+  background-position-x: (-1)*($sizeScreenSpriteImg*8)
+  background-position-y: (-1)*($sizeScreenSpriteImg*6)
+  background-size: $sizeScreenSprite
+  background-repeat: no-repeat
+  opacity: 0.3
+  transition: ease-in-out 0.10s
+
+.search__button:hover
+  opacity: 0.8

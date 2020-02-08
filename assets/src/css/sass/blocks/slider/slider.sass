@@ -1,0 +1,16 @@
+@import "../../variables"
+
+.slider
+  display: block
+  float: left
+  width: 52%
+  background: #f3f3f3
+  margin-bottom: 10px
+
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .slider
+    min-width: inherit
+    display: block
+    width: 100%

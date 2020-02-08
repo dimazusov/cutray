@@ -1,0 +1,12 @@
+@import "../../variables"
+
+.item
+  width: $itemListScreenWidth
+  height: 248px
+  background: #eee
+  border-radius: 7px
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .item
+    width: $itemListMobileWidth
+    height: 210px

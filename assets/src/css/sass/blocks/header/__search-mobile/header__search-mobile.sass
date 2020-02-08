@@ -1,0 +1,49 @@
+@import "../../../variables"
+
+.header__search-mobile
+  background: white
+  height: 100%
+  text-align: center
+  vertical-align: middle
+  width: $headerSizePart
+  display: none
+
+.header__search-mobile-link
+  height: 50px
+  width: 50px
+  display: inline-block
+  background-image: url("/img/sprite.png")
+  background-position-x: (-1)*($sizeSpriteImg*8)
+  background-position-y: (-1)*($sizeSpriteImg*6)
+  background-size: $sizeSprite
+  background-repeat: no-repeat
+  transition: ease-in-out 0.10s
+  cursor: pointer
+  opacity: .3
+
+.header__search-mobile-link:hover
+  opacity: .8
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__search-mobile
+    display: table-cell
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__search-mobile-link
+    width: $headerSizePart
+    display: inline-block
+
+  .header__search-mobile-link
+    width: $headerSizeBGImage
+    height: $headerSizeBGImage
+
+// планшеты
+@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+  .header__search-mobile-link
+    width: $sizeTabletSpriteImg
+    height: $sizeTabletSpriteImg
+    background-position-x: (-1)*($sizeTabletSpriteImg*8)
+    background-position-y: (-1)*($sizeTabletSpriteImg*6)
+    background-size: $sizeTabletSprite
+

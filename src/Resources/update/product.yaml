@@ -1,0 +1,57 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+product:
+  model: 'App\Entity\Product'
+  eventListener: '\App\ResourceListeners\ResourceProductListener'
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt: []
+    name:
+      column: 'name'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    vendor:
+      column: 'vendor'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    price:
+      column: 'price'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+        Regex:
+          pattern: '/^[0-9]\d*$/'
+          message: 'errors.unsigned_integer'
+        Length:
+          min: 1
+          max: 12
+    description:
+      column: 'description'
+      constraints:
+        Length:
+          min: 1
+          max: 1000
+    full_description:
+      column: 'full_description'
+      constraints:
+        Length:
+          min: 1
+          max: 3000
+    category_id:
+      column: 'category_id'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    image_hash:
+      type: 'images'
+      constraints:
+        Regex:
+          pattern: '/^[0-9abcdef]{64}$/'
+          message: 'error.image.wrongPosition'

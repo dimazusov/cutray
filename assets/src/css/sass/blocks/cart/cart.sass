@@ -1,0 +1,239 @@
+@import "../../variables"
+@import "../../mixins"
+
+.cart
+  display: block
+  padding: 15px
+  text-align: center
+
+.cart__order
+  display: block
+  clear: both
+
+.cart__order-img
+  float: left
+  display: block
+  max-width: 10%
+
+.cart__order-desc
+  float: left
+  padding: 10px 0 0 3%
+  max-width: 87%
+  display: inline-block
+
+.cart__order-number-mobile,
+.cart__order-name-mobile,
+.cart__order-count-mobile,
+.cart__order-amount-mobile
+  display: none
+  padding: 10px
+
+.cart__header-number,
+.cart__header-name,
+.cart__header-count,
+.cart__header-amount,
+
+.cart__order-number,
+.cart__order-name,
+.cart__order-count,
+.cart__order-amount
+  text-align: left
+  float: left
+  display: block
+  padding: 15px
+  box-sizing: border-box
+  font-family: arial
+  position: relative
+
+.cart__order-number,
+.cart__order-count,
+.cart__order-amount
+  padding-top: 25px
+
+.cart__order-name_right
+  text-align: right
+
+.cart__header-number, .cart__order-number
+  width: 15%
+
+.cart__header-name, .cart__order-name
+  width: 50%
+
+.cart__header-count, .cart__order-count
+  width: 15%
+
+.cart__header-amount, .cart__order-amount
+  width: 20%
+
+.cart__total
+  width: 20%
+  display: block
+  float: right
+  padding: 5px
+  box-sizing: border-box
+  font-family: arial
+
+.cart__payment
+  border: 1px solid $cutrayBlue
+  display: inline-block
+  padding: 10px
+  border-radius: 5px
+
+.cart__counter-value
+  padding: 0 5px
+
+.cart__counter-value,
+.cart__counter-right,
+.cart__counter-left
+  float: left
+
+.cart__counter-left,
+.cart__counter-right
+  position: relative
+  top: -4px
+  opacity: 0.4
+
+.cart__counter-left:hover,
+.cart__counter-right:hover
+  opacity: 1
+  cursor: pointer
+
+.cart__counter-left
+  @include setBackground(6, 4, 22)
+
+.cart__counter-right
+  @include setBackground(8, 2, 22)
+
+.cart__counter-left:hover, .cart__counter-right:hover
+  @include setHoverBackground()
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .cart__order-value
+    padding: 25px
+
+  .cart__header
+    border: none
+    height: 0
+
+  .cart__order
+    font-size: 14px
+
+  .cart__title
+    text-align: center
+
+  .cart__order-img
+    width: 30px
+    padding: 30px 0 25px 25px
+
+  .cart__order-desc
+    padding: 28px 0 25px 15px
+    max-width: 75%
+
+  .cart__counter-value,
+  .cart__counter-right,
+  .cart__counter-left
+    margin: 35px 5px 15px 5px
+
+  .cart__order-value
+    padding: 33px
+
+  .cart__counter-left
+    margin-left: 25px
+
+  .cart__header-number,
+  .cart__header-name,
+  .cart__header-count,
+  .cart__header-amount
+    display: none
+
+  .cart__order
+    clear: both
+    display: inline-block
+    width: 100%
+    border-top: 1px solid #ccc
+
+  .cart__order-number,
+  .cart__order-name,
+  .cart__order-count,
+  .cart__order-amount
+    padding: 0
+    display: block
+    float: left
+    width: 100%
+
+  .cart__order-number-mobile,
+  .cart__order-name-mobile,
+  .cart__order-count-mobile,
+  .cart__order-amount-mobile
+    font-size: 14px
+    position: absolute
+    float: left
+    display: block
+    left: 0px
+    top: 0px
+
+  .cart__order-count_all
+    width: auto
+    padding: 33px 0 20px 10px
+
+  .cart__order-amount_all
+    width: auto
+    padding: 33px 0 20px 10px
+
+//@media only screen and (min-width: $minWidthSize + px)
+//  .cart
+//    display: table
+//    width: $minWidthSize
+//
+//@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+//  .cart
+//    display: table
+//    width: 100%
+
+
+
+
+//.cart__header
+//  min-width: $minWidthSize
+
+//.cart
+//  display: table
+//  text-align: center
+//  vertical-align:  middle
+//  width: $minWidthSize
+
+//.header__cart-link
+//  height: $headerScreenWidthBlock
+//  width: $headerScreenWidthBlock
+//  display: inline-block
+//  background-image: url("/img/sprite.png")
+//  background-position-x: (-1)*($sizeSpriteImg*4)
+//  background-position-y: (-1)*($sizeSpriteImg*8)
+//  background-size: $sizeSprite
+//  background-repeat: no-repeat
+//  transition: ease-in-out 0.10s
+//  cursor: pointer
+//  opacity: .3
+//
+//.header__cart-link:hover
+//  opacity: .8
+
+
+
+
+// мобильные
+//@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+//  .header__cart-link
+//    width: $headerSizeBGImage
+//    height: $headerSizeBGImage
+//
+//// планшеты
+//@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+//  .header__cart-link
+//    width: $sizeTabletSpriteImg
+//    height: $sizeTabletSpriteImg
+//    background-position-x: (-1)*($sizeTabletSpriteImg*4)
+//    background-position-y: (-1)*($sizeTabletSpriteImg*8)
+//    background-size: $sizeTabletSprite
+

@@ -1,0 +1,14 @@
+pipelines:
+  branches:
+    master:
+    - step:
+        name: Tests
+        image: php:7.2-cli
+        script:
+          - php bin/phpunit
+    - step:
+        name: Deploy
+        image: atlassian/default-image:latest
+        deployment: production
+        script:
+          - ssh cutray@84.201.159.103 'bash /var/www/cutray/release.sh'

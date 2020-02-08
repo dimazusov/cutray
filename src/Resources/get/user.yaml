@@ -1,0 +1,20 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+user:
+  model: 'App\Entity\User'
+  selectColumns:
+    - id
+    - email
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    email:
+      column: 'email'
+      operation: '%LIKE%'
+      constraints:
+        Email:
+          message: 'Указан неправильный email'

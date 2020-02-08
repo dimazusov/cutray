@@ -1,0 +1,79 @@
+@import "../../../variables"
+
+.header__profile
+  width: 80px
+  vertical-align: middle
+  display: inline-block
+
+.header__profile-logout-link
+  opacity: 0.8
+
+@media only screen and (min-width: $minWidthSize + px)
+  .header__profile
+    display: table-cell
+
+  .header__profile-user-img
+    width: $sizeScreenSpriteImg
+    height: $sizeScreenSpriteImg
+
+.header__profile-link
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  width: 50px
+  height: 50px
+  background-size: cover
+  background-position: top center
+  border-radius: 50%
+
+.header__profile-user-img
+  display: inline-block
+  border-radius: 50px
+
+.header__profile-logout-link
+  display: table-cell
+  vertical-align: middle
+  padding-left: 5px
+  width: 50px
+  height: 50px
+  background-size: cover
+  background-position: top center
+  border-radius: 50%
+
+.header__profile_hidden
+  display: none
+
+.header__block-profile
+  width: 120px
+
+@media all and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__profile_showed
+    display: table-cell
+
+  .header__profile-logout-link
+    display: none
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__profile
+    width: $headerSizePart
+    display: table-cell
+
+  .header__profile-link
+    width: $headerScreenWidthBlock
+    height: $headerScreenWidthBlock
+
+  .header__profile-user-img
+    height: $headerScreenWidthBlock
+
+// планшеты
+@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+  .header__profile-user-img
+    width: $sizeTabletSpriteImg * 0.9 // отступы для краев
+    height: $sizeTabletSpriteImg * 0.9
+
+  .header__profile-link
+    width: $sizeTabletSpriteImg
+    height: $sizeTabletSpriteImg
+    background-position-x: (-1)*($sizeTabletSpriteImg*5)
+    background-position-y: (-1)*($sizeTabletSpriteImg*6)
+    background-size: $sizeTabletSprite

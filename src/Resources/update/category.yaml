@@ -1,0 +1,28 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+category:
+  model: 'App\Entity\Category'
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    name:
+      column: 'name'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    seoname:
+      column: 'seoname'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    parent_id:
+      column: 'parent_id'
+      constraints:
+        Length:
+          min: 1
+          max: 30

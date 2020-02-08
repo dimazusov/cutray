@@ -1,0 +1,22 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+user:
+  model: 'App\Entity\User'
+  eventListener: '\App\ResourceListeners\ResourceUserListener'
+  columns:
+    email:
+      required: true
+      column: 'email'
+      constraints:
+        Email:
+          message: 'errors.not_email'
+    password:
+      required: true
+      column: 'password'
+      constraints:
+        Length:
+          min: 6
+          max: 32
+          minMessage: 'errors.too_small'
+          maxMessage: 'errors.too_big'

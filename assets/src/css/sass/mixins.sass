@@ -1,0 +1,16 @@
+@import "variables"
+
+@mixin setBackground ($paddingElLeft, $paddingElTop, $sizeBG)
+  $sizeSprite: ($sizeBG/$sizeFullImgSprite)*$sizeFullSprite
+  $x: (-1)*($sizeBG*$paddingElLeft) + 'px'
+  $y: (-1)*($sizeBG*$paddingElTop) + 'px'
+  width: unquote($sizeBG+ 'px')
+  height: unquote($sizeBG+ 'px')
+  background-image: url("/img/sprite.png")
+  background-position-x: unquote($x)
+  background-position-y: unquote($y)
+  background-size: unquote($sizeSprite+ 'px')
+  background-repeat: no-repeat
+
+@mixin setHoverBackground ()
+  background-image: url("/img/hover_sprite.png")

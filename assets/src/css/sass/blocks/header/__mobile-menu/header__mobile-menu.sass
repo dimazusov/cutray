@@ -1,0 +1,115 @@
+@import "../../../variables"
+
+.header__mobile-menu
+  vertical-align: middle
+  display: none
+
+.header__mobile-menu-link
+  height: 50px
+  width: 50px
+  display: inline-block
+  background-image: url("/img/sprite.png")
+  background-position-x: (-1)*($sizeSpriteImg*5)
+  background-position-y: (-1)*($sizeSpriteImg*6)
+  background-size: $sizeSprite
+  background-repeat: no-repeat
+  transition: ease-in-out 0.10s
+  cursor: pointer
+  opacity: .3
+
+.header__mobile-menu-link:hover
+  opacity: .8
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__mobile-menu
+    width: $headerSizePart
+    display: table-cell
+
+  .header__mobile-menu-link
+    width: $headerSizeBGImage
+    height: $headerSizeBGImage
+
+// планшеты
+@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+  .header__mobile-menu-link
+    width: $sizeTabletSpriteImg
+    height: $sizeTabletSpriteImg
+    background-position-x: (-1)*($sizeTabletSpriteImg*5)
+    background-position-y: (-1)*($sizeTabletSpriteImg*6)
+    background-size: $sizeTabletSprite
+
+
+/* Position and sizing of burger button */
+.bm-burger-button
+
+  position: relative
+  margin-top: -22px
+  left: 3%
+  top: 47px
+  height: 22px
+  width: 32px
+  display: block
+  transition: ease-in-out 0.10s
+  cursor: pointer
+  display: none
+
+@media (min-width: $maxWidthTabletSize + px)
+  .bm-burger-button
+    display: none
+
+@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+  .bm-burger-button
+    left: 4%
+    top: 62px
+    height: 34px
+    width: 40px
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars
+  background: #bdc3c7
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover
+  background: #a9273c
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button
+  height: 24px
+  width: 24px
+
+/* Color/shape of close button cross */
+.bm-cross
+  background: #bdc3c7
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases */
+
+.bm-menu-wrap
+  position: fixed
+  height: 100%
+
+/* General sidebar styles */
+.bm-menu
+  background: #335969
+  padding: 0 1.5em
+  font-size: 1.15em
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape
+  fill: #373a47
+
+/* Wrapper for item list */
+.bm-item-list
+  color: #b8b7ad
+  padding: 0.8em
+
+/* Individual item */
+.bm-item
+  display: inline-block
+
+/* Styling of overlay */
+.bm-overlay
+  background: #b5b5b5
+

@@ -1,0 +1,31 @@
+@import "../../variables"
+
+.registration
+  display: block
+  width: 300px
+  text-align: center
+  border: 1px solid #ccc
+  border-radius: 5px
+  padding: 30px 100px 50px 100px
+  margin: 50px auto
+
+.registration__error
+  color: #ed3667
+
+.registration__error_showed
+  display: inline-block
+  padding: 8px
+
+.registration__input
+  padding: 10px
+
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .registration
+    display: block
+    width: 100%
+    text-align: center
+    border: none
+    padding: 0
+    margin: 25px 0 50px 0

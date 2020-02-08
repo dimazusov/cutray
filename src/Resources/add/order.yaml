@@ -1,0 +1,28 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+order:
+  model: 'App\Entity\Order'
+  columns:
+    user_id:
+      column: 'user_id'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+  eventListener: '\App\ResourceListeners\ResourceOrderListener'
+  child:
+    products:
+      is_array: true
+      joinColumnName: 'order_id'
+      parentJoinColumnName: 'id'
+      model: 'App\Entity\OrderProduct'
+      columns:
+        id:
+          column: 'product_id'
+          constraints:
+            App\Validator\Constraints\UnsignedInt:
+            NotBlank:
+        count:
+          column: 'count'
+          constraints:
+            App\Validator\Constraints\UnsignedInt:
+            NotBlank:

@@ -1,0 +1,22 @@
+@import "../../../variables"
+@import "../../../mixins"
+
+.item__favourite
+  @include setBackground(5, 0, 25)
+  display: block
+  float: left
+  transition: ease-in-out 0.1s
+  opacity: 0.8
+  margin: -5px 2px 0 2px
+  width: 25px
+  height: 25px
+
+.item__favourite:hover
+  @include setHoverBackground()
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .item__favourite
+    @include setBackground(5, 0, 22)
+
+.item__favourite:hover
+  cursor: pointer

@@ -1,0 +1,98 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+  - 'ROLE_UNKNOWN'
+product:
+  model: 'App\Entity\Product'
+  selectColumns:
+    - id
+    - price
+    - name
+    - vendor
+    - category_id
+    - vendor
+    - description
+    - full_description
+    - img_paths
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    ids:
+      column: 'id'
+      is_array: true
+      operation: 'IN'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    category_id:
+      column: 'category_id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    category_ids:
+      column: 'category_id'
+      is_array: true
+      operation: 'IN'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    name:
+      column: 'name'
+      operation: '%LIKE%'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    vendor:
+      column: 'vendor'
+      operation: '%LIKE%'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    max_price:
+      column: 'price'
+      operation: '<'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+        Regex:
+          pattern: '/^[0-9]\d*$/'
+          message: 'errors.unsigned_integer'
+        Length:
+          min: 1
+          max: 12
+    min_price:
+      column: 'price'
+      operation: '>'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+        Regex:
+          pattern: '/^[0-9]\d*$/'
+          message: 'errors.unsigned_integer'
+        Length:
+          min: 1
+          max: 12
+  page:
+    constraints:
+      App\Validator\Constraints\UnsignedInt:
+      Range:
+        min: 1
+        minMessage: 'You must have more than {{ limit }}'
+  countOnPage:
+    constraints:
+      App\Validator\Constraints\UnsignedInt:
+      Range:
+        min: 1
+        max: 40
+        minMessage: 'You must have more than {{ limit }}'
+        maxMessage: 'You must have less than {{ limit }}'
+  child:
+    category:
+      model: 'App\Entity\Category'
+      selectColumns:
+        - id
+        - name
+        - seoname
+      joinColumnName: 'id'
+      parentJoinColumnName: 'category_id'

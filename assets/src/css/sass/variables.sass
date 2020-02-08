@@ -1,0 +1,58 @@
+$minWidthMobileSize: 300
+$maxWidthMobileSize: 960
+
+$minWidthTabletSize: 768
+$maxWidthTabletSize: 960
+
+$minWidthSize: 960
+$maxWidthSize: 1360
+
+$cutrayPink: #ed3667
+$cutrayBlue: #71c2e5
+$colorText: #2b2b2b
+
+$sizeFullSprite: 1700px
+$sizeFullImgSprite: 170px
+
+$sizeScreenSpriteImg: 37px
+$sizeScreenSprite: ($sizeScreenSpriteImg/$sizeFullImgSprite)*$sizeFullSprite
+
+$sizeTabletSpriteImg: 60px
+$sizeTabletSprite: ($sizeTabletSpriteImg/$sizeFullImgSprite)*$sizeFullSprite
+
+$sizeSpriteImg: 34px
+$sizeSprite: ($sizeSpriteImg/$sizeFullImgSprite)*$sizeFullSprite
+
+$headerHeight: 50px
+$countHeaderElements: 7
+
+$headerSizePart: 100%/$countHeaderElements
+$headerSizeBGImage: $sizeSpriteImg
+
+$headerScreenWidthBlock: 70%
+$headerScreenHeightBlock: 70%
+
+$itemListScreenWidth: 168px
+//$itemListTabletWidth: 168px
+$itemListMobileWidth: 128px
+
+$itemListScreenHeight: 170px
+$itemListMobileHeight: 128px
+
+$itemListSceenFontSize: 18px
+$itemListTabletFontSize: 16px
+$itemListMobileFontSize: 13px
+
+$sliderWidth: 940px
+$sliderManagerElementsWidth: 40px
+
+$footerSize: 100px
+
+@mixin setBackground ($paddingElLeft, $paddingElRight, $sizeBG)
+  background-image: url("/img/sprite.png")
+  background-size: 22px
+  background-position: center
+  background-repeat: no-repeat
+  width: $itemListMobileFontSize
+  height: $itemListMobileFontSize
+

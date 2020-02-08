@@ -1,0 +1,324 @@
+.inline {
+    display: inline-block;
+}
+
+/*restyle swal2*/
+.swal2-styled {
+    background-color: #28a745;
+}
+
+/*pagination*/
+.pagination {
+    width: 100%;
+    padding: 0 30px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination > li {
+    border-radius: 50px;
+    display: block;
+    border: none;
+    margin: 3px;
+    padding: 4px;
+
+}
+.page-link {
+    border-radius: 7px;
+    background: #fff;
+}
+
+.page-item.active .page-link {
+    background: #e4606d;
+    border-color: #e4606d;
+}
+
+.page-item a {
+    color: #e4606d;
+}
+/* images plugin */
+.images-outblock {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    height: 140px;
+    width: 140px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.images-innerblock {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 140px;
+    width: 140px;
+}
+
+.images-addblock {
+    height: 80px;
+    width: 80px;
+}
+
+.images-imageblock {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.images-icon-remove {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.images-input {
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.images-input:hover, .images-icon-remove:hover {
+    cursor: pointer;
+}
+
+.images-list {
+    top: 15px;
+    position: relative;
+    max-width: 65px;
+    margin: 8px;
+    max-height: 43px;
+}
+
+@media screen and (min-width: 900px) {
+    article {
+        padding: 1rem 3rem;
+    }
+}
+
+/* triangles */
+.triangle-left, .triangle-right {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+}
+
+.triangle-left:hover, .triangle-right:hover {
+    cursor:pointer;
+}
+.triangle-left:hover, .triangle-right:hover {
+    border-right-color: #67B3E5;
+    border-left-color: #67B3E5;
+}
+.triangle-left {
+    border-right: 15px solid #70c2e5;
+}
+.triangle-right {
+    border-left: 15px solid #70c2e5;
+}
+
+/* animation for loading */
+#fountainG{
+    position:relative;
+    width:210px;
+    height:25px;
+    margin:auto;
+}
+
+.fountainG{
+    position:absolute;
+    top:0;
+    background-color: rgb(204, 204, 204);
+    width:25px;
+    height:25px;
+    animation-name:bounce_fountainG;
+    -o-animation-name:bounce_fountainG;
+    -ms-animation-name:bounce_fountainG;
+    -webkit-animation-name:bounce_fountainG;
+    -moz-animation-name:bounce_fountainG;
+    animation-duration:1.5s;
+    -o-animation-duration:1.5s;
+    -ms-animation-duration:1.5s;
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+    transform:scale(.3);
+    -o-transform:scale(.3);
+    -ms-transform:scale(.3);
+    -webkit-transform:scale(.3);
+    -moz-transform:scale(.3);
+    border-radius:17px;
+    -o-border-radius:17px;
+    -ms-border-radius:17px;
+    -webkit-border-radius:17px;
+    -moz-border-radius:17px;
+}
+
+#fountainG_1{
+    left:0;
+    animation-delay:0.6s;
+    -o-animation-delay:0.6s;
+    -ms-animation-delay:0.6s;
+    -webkit-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+}
+
+#fountainG_2{
+    left:26px;
+    animation-delay:0.75s;
+    -o-animation-delay:0.75s;
+    -ms-animation-delay:0.75s;
+    -webkit-animation-delay:0.75s;
+    -moz-animation-delay:0.75s;
+}
+
+#fountainG_3{
+    left:52px;
+    animation-delay:0.9s;
+    -o-animation-delay:0.9s;
+    -ms-animation-delay:0.9s;
+    -webkit-animation-delay:0.9s;
+    -moz-animation-delay:0.9s;
+}
+
+#fountainG_4{
+    left:79px;
+    animation-delay:1.05s;
+    -o-animation-delay:1.05s;
+    -ms-animation-delay:1.05s;
+    -webkit-animation-delay:1.05s;
+    -moz-animation-delay:1.05s;
+}
+
+#fountainG_5{
+    left:105px;
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -ms-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+}
+
+#fountainG_6{
+    left:131px;
+    animation-delay:1.35s;
+    -o-animation-delay:1.35s;
+    -ms-animation-delay:1.35s;
+    -webkit-animation-delay:1.35s;
+    -moz-animation-delay:1.35s;
+}
+
+#fountainG_7{
+    left:157px;
+    animation-delay:1.5s;
+    -o-animation-delay:1.5s;
+    -ms-animation-delay:1.5s;
+    -webkit-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+}
+
+#fountainG_8{
+    left:184px;
+    animation-delay:1.64s;
+    -o-animation-delay:1.64s;
+    -ms-animation-delay:1.64s;
+    -webkit-animation-delay:1.64s;
+    -moz-animation-delay:1.64s;
+}
+
+
+
+@keyframes bounce_fountainG{
+    0%{
+        transform:scale(1);
+        background-color:rgba(237,51,101,0.41);
+    }
+
+    100%{
+        transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-o-keyframes bounce_fountainG{
+    0%{
+        -o-transform:scale(1);
+        background-color:rgba(237,51,101,0.41);
+    }
+
+    100%{
+        -o-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-ms-keyframes bounce_fountainG{
+    0%{
+        -ms-transform:scale(1);
+        background-color:rgba(237,51,101,0.41);
+    }
+
+    100%{
+        -ms-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-webkit-keyframes bounce_fountainG{
+    0%{
+        -webkit-transform:scale(1);
+        background-color:rgba(237,51,101,0.41);
+    }
+
+    100%{
+        -webkit-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+
+@-moz-keyframes bounce_fountainG{
+    0%{
+        -moz-transform:scale(1);
+        background-color:rgba(237,51,101,0.41);
+    }
+
+    100%{
+        -moz-transform:scale(.3);
+        background-color:rgb(255,255,255);
+    }
+}
+/* end animation for loading */
+html,
+body {
+    height: 100%;
+}
+
+#root {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+}

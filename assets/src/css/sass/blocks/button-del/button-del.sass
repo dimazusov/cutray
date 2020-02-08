@@ -1,0 +1,15 @@
+@import "../../variables"
+@import "../../mixins"
+
+.button-del
+  @include setBackground(2, 2, 23)
+  display: inline-block
+  opacity: 0.3
+  margin: 8px 5px
+
+.button-del:hover
+  @include setHoverBackground()
+
+.button-del:hover
+  opacity: 1
+  cursor: pointer

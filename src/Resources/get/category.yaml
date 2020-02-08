@@ -1,0 +1,48 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+  - 'ROLE_USER'
+  - 'ROLE_UNKNOWN'
+category:
+  model: 'App\Entity\Category'
+  selectColumns:
+    - id
+    - name
+    - seoname
+    - parent_id
+    - cleft
+    - cright
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    name:
+      column: 'name'
+      operation: '%LIKE%'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    seoname:
+      column: 'seoname'
+      operation: 'LIKE'
+      constraints:
+        Length:
+          min: 1
+          max: 30
+    parent_id:
+      column: 'parent_id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    cleft:
+      column: 'cleft'
+      operation: '>'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+    cright:
+      column: 'cright'
+      operation: '<'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:

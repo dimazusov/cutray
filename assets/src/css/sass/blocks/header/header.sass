@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import "../../variables"
+
+.header
+  z-index: 5
+  padding: 10px 10%
+  max-width: unquote($maxWidthSize + px)
+  margin: auto
+  width: 100%
+  height: $headerHeight
+  display: table
+
+@media only screen and (min-width: $minWidthSize + px)
+  .header
+    padding: 10px 0
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header
+    width: 100%
+    padding: 10px 0
+
+@media (max-width: $minWidthTabletSize + px)
+  .header
+    height: 70px !important

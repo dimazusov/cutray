@@ -1,0 +1,21 @@
+@import "../../../variables"
+
+.item__price
+  display: block
+  float: left
+  color: #13af2f
+  padding-left: 11px
+  text-align: left
+  height: 20px
+  width: 85px
+  font-size: 17px
+  overflow: hidden
+  //font-size: $itemListSceenFontSize
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .item__price
+    font-size: $itemListMobileFontSize
+    left: 10px
+    top: -15px
+    width: 65px
+

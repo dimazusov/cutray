@@ -1,0 +1,58 @@
+@import "../../../variables"
+
+.header__search
+  display: inline-block
+  min-width: 325px
+
+.header__search_hide
+  display: none
+
+.header__search-input-text
+  width: 70%
+
+@media (min-width: $minWidthSize + px)
+  .header__search
+    width: 67%
+    top: 12px
+    position: relative
+
+@media (min-width: $maxWidthSize + px)
+  .header__search
+    width: 82%
+
+@media (max-width: $maxWidthMobileSize + px)
+  .header__search
+    display: block
+
+@media (max-width: $maxWidthTabletSize + px)
+  .header__search
+    display: none
+
+//@media (min-width: $minWidthMobileSize + px) and (max-width: $minWidthTabletSize + px)
+//  .header__search
+//    display: block
+//    position: absolute
+//    top: -2px
+//    left: 37%
+//    z-index: 2
+//    padding: 17px
+//    background: #fff
+//    width: 63%
+//
+//    .header__search-input-text
+//     width: 80%
+//
+//
+//@media (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+//  .header__search
+//    display: block
+//    position: absolute
+//    top: -2px
+//    left: 37%
+//    z-index: 2
+//    padding: 17px
+//    background: #fff
+//    width: 63%
+//
+//  .header__search-input-text
+//    width: 70%

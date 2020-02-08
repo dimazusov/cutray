@@ -1,0 +1,54 @@
+@import "../../../variables"
+
+.header__cart
+  display: inline-block
+  text-align: center
+  vertical-align:  middle
+  width: $headerScreenWidthBlock
+
+.header__cart-link
+  height: $headerScreenWidthBlock
+  width: $headerScreenWidthBlock
+  display: inline-block
+  background-image: url("/img/sprite.png")
+  background-position-x: (-1)*($sizeSpriteImg*4)
+  background-position-y: (-1)*($sizeSpriteImg*8)
+  background-size: $sizeSprite
+  background-repeat: no-repeat
+  transition: ease-in-out 0.10s
+  cursor: pointer
+  opacity: .3
+
+.header__cart-link:hover
+  opacity: .8
+
+@media only screen and (min-width: $minWidthSize + px)
+  .header__cart
+    display: table-cell
+    width: initial
+    height: initial
+
+  .header__cart-link
+    width: $sizeScreenSpriteImg
+    height: $sizeScreenSpriteImg
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__cart
+    display: table-cell
+    width: $headerSizeBGImage
+    height: $headerSizeBGImage
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .header__cart-link
+    width: $headerSizeBGImage
+    height: $headerSizeBGImage
+
+// планшеты
+@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+  .header__cart-link
+    width: $sizeTabletSpriteImg
+    height: $sizeTabletSpriteImg
+    background-position-x: (-1)*($sizeTabletSpriteImg*4)
+    background-position-y: (-1)*($sizeTabletSpriteImg*8)
+    background-size: $sizeTabletSprite

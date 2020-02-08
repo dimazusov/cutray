@@ -1,0 +1,20 @@
+@import "../../variables"
+
+.auth-block
+  height: 100%
+  text-align: center
+  vertical-align: middle
+  width: $headerScreenWidthBlock
+  color: #7c7c7c
+
+@media only screen and (min-width: $minWidthSize + px)
+  .auth-block
+    display: table-cell
+    height: initial
+    width: 190px
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .auth-block
+    width: $headerSizePart
+    display: table-cell

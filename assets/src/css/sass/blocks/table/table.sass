@@ -1,0 +1,84 @@
+@import "../../variables"
+@import "../../mixins"
+
+.table
+  display: block
+  width: 100%
+  font-family: arial
+  font-size: 20px
+
+.table__th, .table__tr
+  width: 100%
+  display: table
+  text-align: left
+
+.table_tr_border-bottom_showed
+  border-bottom: 1px solid #ccc
+
+.table_tr_padding_top_20px
+  padding-top: 20px
+
+.table_tr_padding_bottom_20px
+  padding-bottom: 20px
+
+.table__td
+  position: relative
+  padding: 10px 3px
+  box-sizing: border-box
+  display: table-cell
+  min-height: 1px // для пустых ячеек, чтобы ячейки не сдвигались
+  vertical-align: middle
+
+.table__td-value
+  display: table-cell
+  vertical-align: middle
+
+.table__td-value_padding-left_15px
+  padding-left: 15px
+
+.table__td-header
+  display: none
+
+.table__td-header_position_right
+  left: unset
+  right: 0
+
+.table__td_text-align_right
+  text-align: right
+
+.table__td_padding_40px
+  padding-right: 40px
+
+$width: 5
+@for $i from 1 through 20
+  .table__td_width_#{$width}
+    width: unquote($width + '%')
+
+  .table__td-value_width_#{$width}
+    width: unquote($width + '%')
+
+  $width: $width+5
+
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .table__th
+    display: none
+
+  .table__td
+    display: block
+    width: 100%
+    padding: 35px 35px 25px 35px
+    box-sizing: border-box
+
+  .table__td-header
+    position: absolute
+    top: 10px
+    left: 10px
+    display: block
+
+  .table__td-header_position_right
+    left: unset
+    right: 35px
+    top: 25px
+
+  .table__td_sceen-only
+    display: none

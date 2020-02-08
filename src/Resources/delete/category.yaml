@@ -1,0 +1,10 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+category:
+  model: 'App\Entity\Category'
+  columns:
+    id:
+      column: 'id'
+      operation: '='
+      constraints:
+        App\Validator\Constraints\UnsignedInt:

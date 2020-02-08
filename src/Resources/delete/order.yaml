@@ -1,0 +1,14 @@
+accessRoles:
+  - 'ROLE_ADMIN'
+order:
+  model: 'App\Entity\Order'
+  columns:
+    id:
+      column: 'id'
+      constraints:
+        App\Validator\Constraints\UnsignedInt:
+  child:
+    orderProduct:
+      model: 'App\Entity\OrderProduct'
+      joinColumnName: 'order_id'
+      parentJoinColumnName: 'id'

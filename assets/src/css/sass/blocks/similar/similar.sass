@@ -1,0 +1,83 @@
+@import "../../variables"
+@import "../../mixins"
+
+.similar
+  text-align: left
+  display: inline-block
+  width: 80%
+  margin: 20px 0 40px 0
+
+.similar__body
+  display: block
+  width: 100%
+  overflow: hidden
+  height: 248px
+
+.similar__left-icon
+  margin: 110px 0 110px 0
+  opacity: 0.6
+  @include setBackground(6, 4, 40)
+
+.similar__right-icon
+  margin: 110px 0 110px 0
+  opacity: 0.6
+  @include setBackground(8, 2, 40)
+
+.similar__left-icon:hover, .similar__right-icon:hover
+  @include setHoverBackground()
+
+.similar__header
+  padding: 15px
+  font-size: 22px
+  font-family: Roboto
+
+//.similar__body
+//  overflow: hidden
+//  position: relative
+
+//.similar__wrapper
+//  position: absolute
+//  left: 0
+//  display: block
+//  width: 10000%
+
+.similar__left
+  //cursor: pointer
+  display: block
+  float: left
+  //vertical-align: middle
+  //width: $sliderManagerElementsWidth
+
+.similar__right
+  //cursor: pointer
+  display: block
+  float: right
+  //vertical-align: middle
+  //width: $sliderManagerElementsWidth
+
+.similar__left-icon:hover, .similar__right-icon:hover
+  cursor: pointer
+
+@media only screen and (max-width: 1200 + px)
+  .similar
+    width: 100%
+
+// мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .slider
+    min-width: inherit
+    display: block
+    width: 100%
+
+  .item-detail-info
+    display: block
+    width: 100%
+
+//// планшеты
+//@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+//  .header__auth-mobile-link
+//    width: $sizeTabletSpriteImg
+//    height: $sizeTabletSpriteImg
+//    background-position-x: (-1)*($sizeTabletSpriteImg*3)
+//    background-position-y: (-1)*($sizeTabletSpriteImg*7)
+//    background-size: $sizeTabletSprite

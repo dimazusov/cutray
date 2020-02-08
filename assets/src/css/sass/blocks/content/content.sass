@@ -1,0 +1,14 @@
+@import "../../variables"
+
+.content
+  position: relative
+  float: left
+  display: block
+  width: 80%
+
+// планшеты и мобильные
+@media only screen and (min-width: $minWidthMobileSize + px) and (max-width: $maxWidthMobileSize + px)
+  .content
+    display: block
+    width: 100%
+    padding: 0

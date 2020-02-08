@@ -1,0 +1,31 @@
+@import "../../../variables"
+
+.auth-block__auth-link-icon
+  opacity: .3
+
+.auth-block__auth-link-icon:hover
+  opacity: .8
+
+.auth-block__auth-link-icon
+  display: inline-block
+  width: $headerSizeBGImage
+  height: $headerSizeBGImage
+  background-image: url("/img/sprite.png")
+  background-position-x: (-1)*($sizeSpriteImg*3)
+  background-position-y: (-1)*($sizeSpriteImg*7)
+  background-size: $sizeSprite
+  background-repeat: no-repeat
+  transition: ease-in-out 0.10s
+
+// планшеты
+@media only screen and (min-width: $minWidthTabletSize + px) and (max-width: $maxWidthTabletSize + px)
+  .auth-block__auth-link-icon
+    width: $sizeTabletSpriteImg
+    height: $sizeTabletSpriteImg
+    background-position-x: (-1)*($sizeTabletSpriteImg*3)
+    background-position-y: (-1)*($sizeTabletSpriteImg*7)
+    background-size: $sizeTabletSprite
+
+@media (min-width: $maxWidthTabletSize + px)
+  .auth-block__auth-link-icon
+    display: none
