@@ -186,7 +186,7 @@ class List extends Component {
     getProducts() {
         if (this.props.products.length == 0) {
             return (
-                <div className={'catalog__items text-left'}>
+                <div className={'catalog__items'}>
                     <h2>По Вашему запросу товары не найдены</h2>
                 </div>
             );
