@@ -20,7 +20,6 @@ class ProductAdd extends BaseEdit {
 
                 <Form
                     id={this.getId()}
-                    className={'pb-2'}
                     token={this.props.token}
                     fields={this.props.editFields}
                     onChange={this.onChangeFields}
