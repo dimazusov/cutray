@@ -13,13 +13,14 @@ class ProductAdd extends BaseEdit {
         }
 
         return (
-            <div>
+            <div className={'wrapper wrapper__padding-backoffice-footer'}>
                 <Container className="pt-2 pb-3 text-left">
                     <Link to={"/backoffice/" + this.getSource()}>Назад</Link>
                 </Container>
 
                 <Form
                     id={this.getId()}
+                    className={'pb-2'}
                     token={this.props.token}
                     fields={this.props.editFields}
                     onChange={this.onChangeFields}
