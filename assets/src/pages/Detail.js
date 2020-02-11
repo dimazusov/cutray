@@ -65,10 +65,13 @@ class Detail extends Component {
             });
 
             this.getSimilarByCatId(product.category.id, (response) => {
-                this.setState(Object.assign(this.state, {
+                let similars = response.results.filter(item => item.id != product.id);
+
+                this.setState({
+                    ...this.state,
                     product: product,
-                    similars: response.results
-                }));
+                    similars: similars
+                });
             });
         };
 
