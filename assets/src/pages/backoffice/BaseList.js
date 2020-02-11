@@ -1,5 +1,5 @@
 import BasePage from "./BasePage";
-import {Button, Col, Row} from "react-bootstrap";
+import {Button, Col, Container, Row} from "react-bootstrap";
 import React from "react";
 
 export default class BaseList extends BasePage {
@@ -12,14 +12,16 @@ export default class BaseList extends BasePage {
 
     getListHeader() {
         return (
-            <Row>
-                <Col>
-                    <h2 className="m-2">{this.props.label}</h2>
-                </Col>
-                <Col>
-                    <Button className="m-2 float-right" onClick={this.moveToCreate}>Добавить</Button>
-                </Col>
-            </Row>
+            <Container className={'mb-2'}>
+                <Row>
+                    <Col>
+                        <h1 className="header-page p-3 pl-2 float-left">{this.props.label}</h1>
+                    </Col>
+                    <Col>
+                        <Button className="m-3 float-right" onClick={this.moveToCreate}>Добавить</Button>
+                    </Col>
+                </Row>
+            </Container>
         )
     }
 

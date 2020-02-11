@@ -32,7 +32,7 @@ class OrderList extends BaseList {
         }
 
         return (
-            <Container>
+            <div className={'wrapper wrapper__padding-backoffice-footer'}>
                 {this.getListHeader()}
 
                 <List
@@ -45,7 +45,7 @@ class OrderList extends BaseList {
                     source={this.props.source}
                     updateList={this.updateList}
                 />
-            </Container>
+            </div>
         );
     }
 }

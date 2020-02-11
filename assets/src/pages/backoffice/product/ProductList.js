@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Container } from 'react-bootstrap';
 import BaseList from '../BaseList';
 import List from '../../../components/List';
 import { Redirect } from 'react-router-dom';
@@ -30,7 +29,7 @@ class ProductList extends BaseList {
         }
 
         return (
-            <Container>
+            <div className={'wrapper wrapper__padding-backoffice-footer'}>
                 {this.getListHeader()}
 
                 <List
@@ -43,7 +42,7 @@ class ProductList extends BaseList {
                     source={this.props.source}
                     updateList={this.updateList}
                 />
-            </Container>
+            </div>
         );
     }
 }
