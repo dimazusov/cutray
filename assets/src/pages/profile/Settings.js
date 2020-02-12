@@ -35,7 +35,7 @@ class Settings extends Component {
         let userId = this.props.userId;
         let data = {
             token: this.props.token,
-            user: [{id: userId}]
+            user: {id: userId}
         };
 
         cutrayApi.get('user', data, (res) => {
