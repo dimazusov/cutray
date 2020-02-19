@@ -30,8 +30,8 @@ RUN apt-get install -y \
 RUN rm /etc/nginx/sites-available/default
 RUN rm /etc/nginx/sites-enabled/default
 
-COPY ./conf/nginx/site.com /etc/nginx/sites-available/site.com
-COPY ./conf/nginx/site.com /etc/nginx/sites-enabled/site.com
+COPY ./conf/dev/nginx/cutray.ru.com /etc/nginx/sites-available/cutray.ru.com
+COPY ./conf/dev/nginx/cutray.ru.com /etc/nginx/sites-enabled/cutray.ru.com
 
 RUN mkdir /app
 ADD . /app

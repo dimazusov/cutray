@@ -9,7 +9,7 @@ class DataList extends React.Component {
         let countPages = Math.ceil(this.props.totalCount / countOnPage);
 
         return (
-            <Container>
+            <Container className={'text-center'}>
                 {this.props.children}
                 <Pagination
                     location={this.props.location}

@@ -36,9 +36,9 @@ class BaseApiController extends AbstractController
      * @return array
      */
     public function getUserRoles() :array {
-        $user = $this->get('security.token_storage')->getToken()->getUser();
+        $user = $this->getCurrentUser();
 
-        if ($user === 'anon.') {
+        if (is_null($user)) {
             return ['ROLE_UNKNOWN'];
         }
 

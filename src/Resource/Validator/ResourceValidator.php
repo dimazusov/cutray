@@ -3,6 +3,7 @@
 namespace App\Resource\Validator;
 
 use App\Resource\AbstractResource;
+use App\Validator\Constraints\UnsignedMoreZero;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -21,7 +22,7 @@ class ResourceValidator extends AbstractResourceValidator
         $errors = [];
         $countElements = $this->getCountElements($resource);
 
-        $constraint = new \App\Validator\Constraints\UnsignedMoreZero();
+        $constraint = new UnsignedMoreZero();
 
         if (!is_null($resource->getPage())) {
             $violations = $validation->validate($resource->getPage(), [$constraint]);

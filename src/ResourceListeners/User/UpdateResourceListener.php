@@ -1,15 +1,14 @@
 <?php
 
-namespace App\ResourceListeners;
+namespace App\ResourceListeners\User;
 
 use App\Entity\User;
 use App\Resource\Error;
 use App\Resource\Column\Column;
 use App\Resource\AbstractResource;
 use App\Resource\ActionListener\AbstractResourceListener;
-use Symfony\Component\HttpFoundation\Request;
 
-class ResourceUserListener extends AbstractResourceListener
+class UpdateResourceListener extends AbstractResourceListener
 {
     /**
      * @param AbstractResource $resource
@@ -87,22 +86,6 @@ class ResourceUserListener extends AbstractResourceListener
         }
 
         return $hashedPass;
-    }
-
-    /**
-     * Return current User or null
-     *
-     * @return User|null
-     */
-    public function getCurrentUser() : ?User {
-        $request = Request::createFromGlobals();
-        $token = $request->headers->get('X-AUTH-TOKEN');
-
-        $user = $this->container->get('doctrine')
-            ->getRepository(User::class)
-            ->findOneBy(['apiToken' => $token]);
-
-        return $user;
     }
 
     /**

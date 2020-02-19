@@ -24,7 +24,7 @@ export default connect(
         token: state.profile.token
     }),
     dispatch => ({
-        clearUserData: (userData) => {
+        clearUserData: () => {
             dispatch({ type: 'CLEAR_PROFILE_USER_DATA', data: {}});
         }
     })
