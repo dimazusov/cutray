@@ -9,12 +9,19 @@ services:
         MYSQL_PASSWORD: ${MYSQL_PASS}
     volumes:
         - /var/lib/mysql:/var/lib/mysql
-  web:
-    build: ./docker
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
     volumes:
       - .:/app
-    ports:
-      - '80:80'
+      - ./docker/conf/dev/nginx/site.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php
+  php:
+    image: bitnami/php-fpm:latest
+    volumes:
+      - .:/app
     links:
       - mysql
   redis:
