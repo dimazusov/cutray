@@ -1,4 +1,5 @@
 accessRoles:
+  - 'ROLE_ADMIN'
   - 'ROLE_USER'
 order:
   columns:

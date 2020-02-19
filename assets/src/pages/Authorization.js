@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import UserApi from "../cutrayApi/UserApi";
 import {connect} from "react-redux";
 
@@ -109,6 +109,11 @@ class Authorization extends Component {
                             <input className="button" onClick={this.auth} type="submit" value="Войти" />
                         </div>
                     </form>
+
+                    <div className={'auth__help-text'}>
+                        Нет аккаунта? Пройдите простую <Link to={'/registration'}>регистрацию</Link>
+                    </div>
+
                 </div>
             </div>
         );

@@ -3,7 +3,7 @@ accessRoles:
   - 'ROLE_USER'
 user:
   model: 'App\Entity\User'
-  eventListener: '\App\ResourceListeners\ResourceUserListener'
+  eventListener: '\App\ResourceListeners\User\UpdateResourceListener'
   columns:
     email:
       required: true

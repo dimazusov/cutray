@@ -2,8 +2,10 @@
 
 namespace App\Resource\ActionListener;
 
+use App\Entity\User;
 use App\Resource\AbstractResource;
 use App\Service\ErrorService;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class exists for listen events such as preExecute and postExecute
@@ -40,5 +42,21 @@ abstract class AbstractResourceListener {
      */
     public function getErrors(): array {
         return $this->errManager->getErrors();
+    }
+
+    /**
+     * Return current User or null
+     *
+     * @return User|null
+     */
+    public function getCurrentUser() : ?User {
+        $request = Request::createFromGlobals();
+        $token = $request->headers->get('X-AUTH-TOKEN');
+
+        $user = $this->container->get('doctrine')
+            ->getRepository(User::class)
+            ->findOneBy(['apiToken' => $token]);
+
+        return $user;
     }
 }

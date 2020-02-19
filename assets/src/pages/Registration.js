@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Window from "../containers/Window";
-import { Redirect } from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import UserApi from "../cutrayApi/UserApi";
 import {connect} from "react-redux";
 
@@ -136,6 +136,11 @@ class Registration extends Component {
                             <input className="button" type="submit" onClick={this.registration} value="Зарегистрироваться" />
                         </div>
                     </form>
+
+                    <div className={'registration__help-text'}>
+                        Есть аккаунт? <Link to={'/auth'}>Авторизуйтесь</Link>
+                    </div>
+
                 </div>
             </div>
         );
